@@ -9,6 +9,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
   const pathname = usePathname();
   const { replace } = useRouter();
 
+  // * useDebouncedCallback を使うと、指定した秒数だけ入力が止まらないと処理が走らなくなる
   const handleSearch = useDebouncedCallback((term: string) => {
     const params = new URLSearchParams(searchParams);
 

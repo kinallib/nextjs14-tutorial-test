@@ -22,6 +22,8 @@ const links = [
 ];
 
 export default function NavLinks() {
+  //* usePathname で 現在表示されているページの path を取得できる
+  //* http:locahost:3000/dashboard/invoices であれば /dashboard/invoices が返る
   const pathname = usePathname();
   return (
     <>
